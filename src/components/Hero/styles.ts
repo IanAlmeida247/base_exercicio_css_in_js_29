@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import cores from '../../cores'
 
 export const Form = styled.form`
   height: 360px;
@@ -8,25 +9,37 @@ export const Form = styled.form`
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
 
-  &:before {
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: ${(props) => props.theme.corPrincipal};
+    background-color: ${cores.corPrincipal};
     content: '';
     opacity: 0.7;
   }
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 24px 0;
+  }
 `
 
-export const FormContainer = styled.div`
+export const Container = styled.div`
   position: relative;
-  color: ${(props) => props.theme.textColor};
+  color: #eee;
+  width: 65%;
 `
 
-export const Title = styled.h2`
+export const HeroTitle = styled.h2`
   font-family: Gloock, serif;
   font-size: 48px;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `

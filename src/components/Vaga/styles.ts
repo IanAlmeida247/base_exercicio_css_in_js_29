@@ -1,28 +1,29 @@
 import styled from 'styled-components'
+import cores from '../../cores'
 
-export const Card = styled.li`
-  border: 1px solid ${(props) => props.theme.corPrincipal};
-  background-color: ${(props) => props.theme.corSecundaria};
-  color: ${(props) => props.theme.corPrincipal};
+export const Vagas = styled.li`
+  border: 1px solid ${cores.corPrincipal};
+  background-color: ${cores.corSecundaria};
+  color: ${cores.corPrincipal};
   padding: 16px;
   transition: all ease 0.3s;
   border-radius: 8px;
 
-  $:hover {
-    background-color: ${(props) => props.theme.corPrincipal};
-    color: ${(props) => props.theme.corSecundaria};
+  &:hover {
+    background-color: ${cores.corPrincipal};
+    color: ${cores.corSecundaria};
   }
 `
 
-export const CardTitle = styled.h3`
+export const VagaTitulo = styled.h3`
   font-weight: bold;
   margin-bottom: 16px;
 `
 
-export const CardLink = styled.a`
-  border-color: ${(props) => props.theme.corSecundaria};
-  background-color: ${(props) => props.theme.corPrincipal};
-  color: ${(props) => props.theme.corSecundaria};
+export const VagaLink = styled.a`
+  border-color: ${cores.corSecundaria};
+  background-color: ${cores.corPrincipal};
+  color: ${cores.corSecundaria};
   display: inline-block;
   padding: 8px 16px;
   text-decoration: none;
@@ -33,10 +34,9 @@ export const CardLink = styled.a`
   text-align: center;
 
   &:hover {
-    border-color: ${(props) => props.theme.corPrincipal};
-    background-color: ${(props) => props.theme.corSecundaria};
-    color: ${(props) => props.theme.corPrincipal};
-  }
+  border-color: ${cores.corPrincipal};
+  background-color: ${cores.corSecundaria};
+  color: ${cores.corPrincipal};
 
   @media (max-width: 768px) {
     display: block;

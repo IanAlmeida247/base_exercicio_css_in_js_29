@@ -1,20 +1,26 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import cores from './cores'
 
-const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Lato, sans-serif;
-    list-style: none;
-  }
+const EstiloGlobal = createGlobalStyle`
+:root {
+  ${cores.corPrincipal};
+  ${cores.corSecundaria};
+}
 
-  body {
-    padding-bottom: 120px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato, sans-serif;
+  list-style: none;
+}
+
+body {
+  padding-bottom: 120px;
   }
 `
 
-export default GlobalStyle
+export default EstiloGlobal
 
 export const Container = styled.div`
   max-width: 1024px;
